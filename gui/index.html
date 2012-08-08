@@ -4,17 +4,18 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>HoneyProxy</title>
-	
-	<link rel="stylesheet" href="./css/style.css">
+
 	<link rel="stylesheet" href="./js/prettify/prettify.css">
 	<link rel="stylesheet" href="./js/jquery-ui/css/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="./js/extjs/resources/css/ext-all.css">
+	<link rel="stylesheet" href="./css/style.css">	
 </head>
 <body>
-<header>
+<header id=header>
 <h3>HoneyProxy</h3>
 </header>
-<div id="main" class="goog-splitpane">
-	<div class=goog-splitpane-first-container>
+<div id="main">
+	<div id=grid></div>
 		<table id="traffictable">
 			<colgroup span="6">
 				<col style="width: 1%; ">
@@ -51,23 +52,20 @@
 			HoneyProxy is still in an very early stage. Getting some feedback from you would be awesome. <a href="https://github.com/mhils/HoneyProxy">Thanks!</a>
 		</ul>
 		</div>
-	</div>
-	<div class=goog-splitpane-second-container id=detail>
-		<div class=tabs>
-			<ul>
-			    <li><a href="#preview">Preview</a></li>
-			    <li><a href="#details">Details</a></li>
-			    <li><a href="#raw">Raw</a></li>
-			</ul>
-			<div id=preview></div>
-			<div id=details></div>
-			<div id=raw></div>
-		</div>
-	</div>
-	<div class='goog-splitpane-handle'></div>
 </div>
-<footer></footer>
-
+<div id=detail>
+	<div class=tabs>
+		<ul>
+		    <li><a href="#preview">Preview</a></li>
+		    <li><a href="#details">Details</a></li>
+		    <li><a href="#raw">Raw</a></li>
+		</ul>
+		<div id=preview></div>
+		<div id=details></div>
+		<div id=raw></div>
+	</div>
+</div>
+<!-- 
 <script src="./js/closure-library/closure/goog/base.js"></script>
 <script>
 goog.require('goog.ui.TableSorter');
@@ -76,6 +74,9 @@ goog.require('goog.dom');
 goog.require('goog.dom.ViewportSizeMonitor');
 goog.require('goog.style');
 </script>
+ -->
+<script type="text/javascript" src="./js/extjs/ext-debug.js"></script>
+
 <script src="./js/jquery-1.7.2.js"></script>
 <script src="./js/jquery-ui/jquery-ui.min.js"></script>
 <script src="./js/underscore.js"></script>
@@ -85,27 +86,27 @@ goog.require('goog.style');
 <script src="./js/prettify/lang-css.js"></script>
 
 
-<script src="./js/honeyproxy/honeyproxy.js"></script>
-<script src="./js/honeyproxy/Config.js"></script>
-<script src="./js/honeyproxy/utilities.js"></script>
-<script src="./js/honeyproxy/template.js"></script>
-<script src="./js/honeyproxy/websocket.js"></script>
-<script src="./js/honeyproxy/Flow.js"></script>
-<script src="./js/honeyproxy/FlowView.js"></script>
-<script src="./js/honeyproxy/flows/DocumentFlow.js"></script>
-<script src="./js/honeyproxy/flows/PrettyFlow.js"></script>
-<script src="./js/honeyproxy/flows/CssFlow.js"></script>
-<script src="./js/honeyproxy/flows/JsFlow.js"></script>
-<script src="./js/honeyproxy/flows/XmlFlow.js"></script>
-<script src="./js/honeyproxy/flows/HtmlFlow.js"></script>
-<script src="./js/honeyproxy/flows/ImageFlow.js"></script>
-<script src="./js/honeyproxy/Traffic.js"></script>
-<script src="./js/honeyproxy/TrafficView.js"></script>
-<script src="./js/honeyproxy/TableSorter.js"></script>
-<script src="./js/honeyproxy/MainLayout.js"></script>
-<script src="./js/honeyproxy/DetailView.js"></script>
-<script src="./js/honeyproxy/popOut.js"></script>
-<script src="./js/honeyproxy/dirdump.js"></script>
-<script src="./js/honeyproxy/tutorial.js"></script>
+<script src="./js/HoneyProxy/honeyproxy.js"></script>
+<script src="./js/HoneyProxy/Config.js"></script>
+<script src="./js/HoneyProxy/utilities.js"></script>
+<script src="./js/HoneyProxy/template.js"></script>
+<script src="./js/HoneyProxy/websocket.js"></script>
+<script src="./js/HoneyProxy/Flow.js"></script>
+<script src="./js/HoneyProxy/FlowView.js"></script>
+<script src="./js/HoneyProxy/flows/DocumentFlow.js"></script>
+<script src="./js/HoneyProxy/flows/PrettyFlow.js"></script>
+<script src="./js/HoneyProxy/flows/CssFlow.js"></script>
+<script src="./js/HoneyProxy/flows/JsFlow.js"></script>
+<script src="./js/HoneyProxy/flows/XmlFlow.js"></script>
+<script src="./js/HoneyProxy/flows/HtmlFlow.js"></script>
+<script src="./js/HoneyProxy/flows/ImageFlow.js"></script>
+<script src="./js/HoneyProxy/Traffic.js"></script>
+<script src="./js/HoneyProxy/TrafficView.js"></script>
+<!-- <script src="./js/HoneyProxy/TableSorter.js"></script>
+<script src="./js/HoneyProxy/MainLayout.js"></script> -->
+<script src="./js/HoneyProxy/DetailView.js"></script>
+<script src="./js/HoneyProxy/popOut.js"></script>
+<script src="./js/HoneyProxy/dirdump.js"></script>
+<script src="./js/HoneyProxy/tutorial.js"></script>
 </body>
 </html>

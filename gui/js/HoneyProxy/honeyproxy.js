@@ -1,3 +1,34 @@
+Ext.Loader.setConfig({
+	enabled: true,
+	paths: {
+		'HoneyProxy': './js/HoneyProxy',
+		'Ext'       : './js/extjs/src'
+	}
+});
+Ext.require([
+	'Ext.grid.*',
+	'Ext.data.*',
+	'Ext.util.*',
+	'Ext.data.StoreManager',
+	'Ext.grid.PagingScroller',
+	'HoneyProxy.stores.FlowStore',
+	'HoneyProxy.views.FlowGrid',
+	'HoneyProxy.views.Viewport'
+]);
+
+Ext.onReady(function(){
+	Ext.create('HoneyProxy.views.Viewport');
+	
+	store = Ext.create('HoneyProxy.stores.FlowStore');
+	HoneyProxy.on("newflow",store.addSorted.bind(store));
+	
+	grid = Ext.create('HoneyProxy.views.FlowGrid', {
+		store: store,
+		renderTo: "grid"
+	});
+});
+
+
 var HoneyProxy = {
 		flowModels:[],
 		currentSelection: undefined,
